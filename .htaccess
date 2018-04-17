@@ -1,0 +1,11 @@
+RewriteEngine On 
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+<FilesMatch "\**\**.(html|js|css)>
+FileETag None
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Fri, 13 Feb 1976 06:00:00 GMT"
+</FilesMatch>
