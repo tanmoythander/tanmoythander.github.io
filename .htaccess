@@ -10,6 +10,6 @@ Header set Pragma "no-cache"
 Header set Expires "Fri, 13 Feb 1976 06:00:00 GMT"
 </FilesMatch>
 
-<FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif)$">
-Header set Cache-Control "max-age=25200"
+<FilesMatch "\**\**.(ico|pdf|jpg|jpeg|png|gif|ttf|eot|svg|woff|woff2)$">
+Header set Cache-Control "max-age=604800"
 </FilesMatch>
